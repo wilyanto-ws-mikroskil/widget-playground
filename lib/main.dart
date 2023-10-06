@@ -25,106 +25,148 @@ class WidgetPlayground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          // Container Example
-          Container(
-            color: Colors.blue,
-            width: 100,
-            height: 100,
-            child: const Center(
-              child: Text(
-                'Container',
-                style: TextStyle(color: Colors.white),
+    return Row(
+      children: [
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Container(
+              color: Colors.pink,
+              width: 50,
+              height: 50,
+            ),
+            Center(
+              child: Container(
+                color: Colors.teal,
+                width: 50,
+                height: 50,
               ),
             ),
-          ),
-
-          // Row and Column Example
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          ],
+        ),
+        const SizedBox(width: 20),
+        Expanded(
+          child: Column(
             children: [
-              Container(
-                color: Colors.red,
-                width: 50,
-                height: 50,
-              ),
-              Container(
-                color: Colors.green,
-                width: 50,
-                height: 50,
-              ),
+              // Container Example
               Container(
                 color: Colors.blue,
-                width: 50,
-                height: 50,
-              ),
-            ],
-          ),
-
-          Column(
-            children: [
-              Container(
-                color: Colors.red,
-                width: 50,
-                height: 50,
-              ),
-              Container(
-                color: Colors.green,
-                width: 50,
-                height: 50,
-              ),
-              Container(
-                color: Colors.blue,
-                width: 50,
-                height: 50,
-              ),
-            ],
-          ),
-
-          // Expanded and Flexible Example
-          Row(
-            children: [
-              Expanded(
-                flex: 1,
-                child: Container(
-                  color: Colors.red,
-                  height: 50,
+                width: 100,
+                height: 100,
+                child: const Center(
+                  child: Text(
+                    'Container',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ),
-              Flexible(
-                flex: 2,
+
+              // Row and Column Example
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Container(
+                    color: Colors.red,
+                    width: 50,
+                    height: 50,
+                  ),
+                  Container(
+                    color: Colors.green,
+                    width: 50,
+                    height: 50,
+                  ),
+                  Container(
+                    color: Colors.blue,
+                    width: 50,
+                    height: 50,
+                  ),
+                ],
+              ),
+
+              Column(
+                children: [
+                  Container(
+                    color: Colors.red,
+                    width: 50,
+                    height: 50,
+                  ),
+                  Container(
+                    color: Colors.green,
+                    width: 50,
+                    height: 50,
+                  ),
+                  Container(
+                    color: Colors.blue,
+                    width: 50,
+                    height: 50,
+                  ),
+                ],
+              ),
+
+              // Expanded and Flexible Example
+              Row(
+                children: [
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      color: Colors.red,
+                      height: 50,
+                    ),
+                  ),
+                  Flexible(
+                    flex: 2,
+                    child: Container(
+                      color: Colors.green,
+                      height: 50,
+                    ),
+                  ),
+                ],
+              ),
+
+              // Center Example
+              Center(
                 child: Container(
-                  color: Colors.green,
-                  height: 50,
+                  color: Colors.yellow,
+                  width: 100,
+                  height: 100,
+                  child: const Text('Center'),
+                ),
+              ),
+
+              // Align Example
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Container(
+                  color: Colors.orange,
+                  width: 100,
+                  height: 100,
+                  child: const Text('Align'),
                 ),
               ),
             ],
           ),
-
-          // Center Example
-          Center(
-            child: Container(
-              color: Colors.yellow,
-              width: 100,
-              height: 100,
-              child: const Text('Center'),
+        ),
+        const SizedBox(width: 20),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Expanded(
+              child: Container(
+                color: Colors.pink,
+                width: 50,
+                height: 50,
+              ),
             ),
-          ),
-
-          // Align Example
-          Align(
-            alignment: Alignment.bottomRight,
-            child: Container(
-              color: Colors.orange,
-              width: 100,
-              height: 100,
-              child: const Text('Align'),
+            Center(
+              child: Container(
+                color: Colors.teal,
+                width: 50,
+                height: 50,
+              ),
             ),
-          ),
-        ],
-      ),
+          ],
+        ),
+      ],
     );
   }
 }
